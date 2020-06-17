@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route } from 'react-router-dom';
+import { createBrowserHistory as history } from 'history';
 import './tail.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Header from './common/Header';
+import Dashboard from './dashboard';
+import FrontendResource from './front-resource'
+import BackendResource from './back-resource'
+import Infrastructure from './infrastructure';
+
+const Index = () => (
+  <Router history={history()}>
+    <div className="flex flex-col min-h-screen">
+         <Header />
+         <Route exact path="/" component={Dashboard} />
+         <Route exact path="/frontend-resource" component={FrontendResource} />
+         <Route exact path="/backend-resource" component={BackendResource} />
+         <Route exact path="/infrastructure-resource" component={Infrastructure} />
+    </div>
+      </Router>
+);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <Index />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
