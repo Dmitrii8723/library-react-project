@@ -4,7 +4,7 @@ import Sidebar from '../common/Sidebar';
 const BackendResource = (props) => (
 <div className="flex flex-grow 1 bg-blue-400">
 <Sidebar />
-<div className="bg-red-400 flex-grow-1 w-2/3">
+<div className="bg-red-400 flex-grow-1 w-3/4">
 </div>
 </div>
 );

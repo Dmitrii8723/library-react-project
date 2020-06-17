@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => (
-    <div className="text-gray-700 flex-grow-1 w-1/3">
+    <div className="text-gray-700 flex-grow-1 w-1/4">
 <ul className="ml-5">
   <li className="mt-10">
     <Link className="text-dark-500 hover:text-blue-800" to="frontend-resource">Frontend frameworks</Link>
