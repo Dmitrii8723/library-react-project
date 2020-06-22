@@ -1,4 +1,4 @@
-const infrastructure = [
+const frontVideo = [
     {
         "id": 1,
         "name": "Introduction to react JS",
@@ -16,4 +16,4 @@ const infrastructure = [
     }
         ];
 
-module.exports = infrastructure;
+module.exports = frontVideo;

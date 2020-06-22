@@ -1,4 +1,4 @@
-const infrastructure = [
+const frontResource = [
 {
 "id": 1,
 "name": "React JS",
@@ -19,4 +19,4 @@ const infrastructure = [
 }
         ];
 
-module.exports = infrastructure;
+module.exports = frontResource;
