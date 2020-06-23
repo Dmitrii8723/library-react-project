@@ -1,4 +1,4 @@
-const backVideo = [
+const infrastructureVideo = [
     {
         "id": 1,
         "name": "Introduction to Kubernetes",
@@ -21,4 +21,4 @@ const backVideo = [
     }
         ];
 
-module.exports = backVideo;
+module.exports = infrastructureVideo;
