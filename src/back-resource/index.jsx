@@ -3,7 +3,7 @@ import Sidebar from '../common/Sidebar';
 import Card from '../common/Card';
 import samples from './samples'
 
-const BackendResource = (props) => (
+const BackendResource = () => (
 <div className="flex flex-grow 1">
 <Sidebar/>
 <div className="bg-white-400 flex flex-row flex-grow-1 w-4/5">

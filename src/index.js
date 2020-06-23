@@ -8,7 +8,9 @@ import Dashboard from './dashboard';
 import FrontendResource from './front-resource'
 import BackendResource from './back-resource'
 import Infrastructure from './infrastructure';
+import InfrastructureVideo from './infrastructure-video';
 import FrontendVideo from './front-video';
+import BackendVideo from './back-video';
 
 const Index = () => (
   <Router history={history()}>
@@ -18,7 +20,9 @@ const Index = () => (
          <Route exact path="/frontend-resource" component={FrontendResource} />
          <Route exact path="/backend-resource" component={BackendResource} />
          <Route exact path="/infrastructure-resource" component={Infrastructure} />
+         <Route exact path="/infrastructure-video" component={InfrastructureVideo} />
          <Route exact path="/frontend-video" component={FrontendVideo} />
+         <Route exact path="/backend-video" component={BackendVideo} />
     </div>
       </Router>
 );

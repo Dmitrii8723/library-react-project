@@ -11,7 +11,7 @@ const frontVideo = [
     },
     {
         "id": 3,
-        "name": "Angular JS",
+        "name": "Introduction to Angular JS",
         "webPreviewUrl": "https://www.youtube.com/watch?v=nO1ROKMjPqI",
     }
         ];
