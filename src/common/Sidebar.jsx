@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => (
     <div className="bg-gray-200 text-gray-700 flex-grow-1 w-1/5">
 <ul className="ml-5">
-  {/* <li className="mt-10">
+  <li className="mt-10">
   <Link className="text-dark-500 hover:text-blue-600" to="/">Home</Link>
-  </li>  */}
+  </li> 
   <li className="mt-10">
     <Link className="text-dark-500 hover:text-blue-600" to="/frontend-resource">Frontend frameworks</Link>
   </li>
