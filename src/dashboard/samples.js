@@ -1,4 +1,4 @@
-const infrastructure = [
+const dashboard = [
         {
                 "id": 1,
                 "name": "React JS",
@@ -34,4 +34,4 @@ const infrastructure = [
                 "webPreviewUrl": "https://www.youtube.com/watch?v=PH-2FfFD2PU",
         },
         ];
-module.exports = infrastructure;
+module.exports = dashboard;

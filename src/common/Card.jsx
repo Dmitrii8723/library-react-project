@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player/lazy';
 const Card = (props) => (
 <div className="flex flex-col bg-gray-200 h-64 m-3 text-gray-700 
 rounded-lg shadow-lg pt-1 w-2/12">  
-{!props.sample.webPreviewUrl && (
+{props.sample.cover && (
 <img className="h-48 w-52 rounded-lg"
             src={props.sample.cover}
             alt=""
@@ -20,7 +20,7 @@ rounded-lg shadow-lg pt-1 w-2/12">
 <div className="mb-2">
    {props.sample.name}
 </div>
-{ !props.sample.webPreviewUrl && (
+{props.sample.link && (
          <a className="text-dark-500 hover:text-blue-600"
             href={props.sample.link}
             target="_blank"
