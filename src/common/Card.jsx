@@ -1,35 +1,46 @@
-import React from 'react';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
 import ReactPlayer from 'react-player/lazy';
+import { withRouter } from 'react-router-dom';
 
 const Card = (props) => (
-<div className="flex flex-col bg-gray-200 h-64 m-3 text-gray-700 
-rounded-lg shadow-lg pt-1 w-2/12">  
+<div css={css`
+width: 27%; 
+margin: 0 1em; 
+border: 1px solid rgb(242, 242, 243);
+height: 20em;
+padding: 1em;
+margin: 1em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+`}
+>  
 {props.sample.cover && (
-<img className="h-48 w-52 rounded-lg"
-            src={props.sample.cover}
-            alt=""
-          />)}
+<img
+ css={css`
+ width: 100%; 
+ height: 80%;
+ &:hover {
+   cursor: pointer;
+}`}
+ src={props.sample.cover}
+ alt=""
+ onClick={() => window.open(props.sample.link)}
+/>)}
 {props.sample.webPreviewUrl && (
+   <div css={css`
+   width: 100%; 
+   height: 80%;`}>
 <ReactPlayer 
    width='100%'
    height='100%' 
    url={props.sample.webPreviewUrl} 
    controls
-/>)}
-<div className="ml-2 mt-1">
-<div className="mb-2">
-   {props.sample.name}
-</div>
-{props.sample.link && (
-         <a className="text-dark-500 hover:text-blue-600"
-            href={props.sample.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Show the resource
-          </a>
-)}
-</div>
+/>
+</div>)}
+   <p css={css`font-size: 1.2em;`}>{props.sample.name}</p>
 </div>
 );
 

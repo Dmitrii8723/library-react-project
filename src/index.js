@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory as history } from 'history';
-import './tail.css';
 import Header from './common/Header';
 import Dashboard from './dashboard';
 import FrontendResource from './front-resource'
@@ -11,11 +10,11 @@ import Infrastructure from './infrastructure';
 import InfrastructureVideo from './infrastructure-video';
 import FrontendVideo from './front-video';
 import BackendVideo from './back-video';
+import { css, jsx } from '@emotion/react';
 
 const Index = () => (
   <Router history={history()}>
-    <div className="flex flex-col min-h-screen">
-         <Header />
+         <Header/>
          <Route exact path="/" component={Dashboard} />
          <Route exact path="/frontend-resource" component={FrontendResource} />
          <Route exact path="/backend-resource" component={BackendResource} />
@@ -23,7 +22,6 @@ const Index = () => (
          <Route exact path="/infrastructure-video" component={InfrastructureVideo} />
          <Route exact path="/frontend-video" component={FrontendVideo} />
          <Route exact path="/backend-video" component={BackendVideo} />
-    </div>
       </Router>
 );
 

@@ -1,17 +1,14 @@
-import React from 'react';
+ /** @jsx jsx */
+ import { css, jsx } from '@emotion/react';
 import Sidebar from '../common/Sidebar';
-import Card from '../common/Card';
-import samples from './samples'
+import frontEndSamples from './samples'
+import Container from '../common/Container'
 
-const FrontendVideo = () => (
-<div className="flex flex-grow 1">
+const FrontEndVideo = () => (
+<div css={css`display: flex; width: 100%;`}>
 <Sidebar/>
-<div className="bg-white-400 w-4/5">
-  <div className="w-full flex flex-wrap">
-{samples.map((sample) => (<Card sample={sample} />))}
-  </div>
-</div>
+<Container samples={frontEndSamples} />
 </div>
 );
 
-export default FrontendVideo;
+export default FrontEndVideo;

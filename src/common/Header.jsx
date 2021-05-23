@@ -1,7 +1,11 @@
-import React from 'react';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
 
 const Header = () => (
-    <div className="bg-gray-800 h-20">
+    <div css={css`
+    height: 5em; 
+    background: gray; 
+    width: 100%;`}>
     </div>
 )
 
