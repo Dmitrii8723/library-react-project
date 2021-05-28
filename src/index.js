@@ -10,7 +10,6 @@ import Infrastructure from './infrastructure';
 import InfrastructureVideo from './infrastructure-video';
 import FrontendVideo from './front-video';
 import BackendVideo from './back-video';
-import { css, jsx } from '@emotion/react';
 
 const Index = () => (
   <Router history={history()}>

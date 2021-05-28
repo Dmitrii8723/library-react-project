@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react';
 import ReactPlayer from 'react-player/lazy';
-import { withRouter } from 'react-router-dom';
 
 const Card = (props) => (
 <div css={css`
-width: 27%; 
+width: 27.5%; 
 margin: 0 1em; 
 border: 1px solid rgb(242, 242, 243);
 height: 20em;
@@ -17,7 +16,7 @@ align-items: center;
 justify-content: space-between;
 `}
 >  
-{props.sample.cover && (
+{props.sample.cover_url && (
 <img
  css={css`
  width: 100%; 
@@ -25,18 +24,18 @@ justify-content: space-between;
  &:hover {
    cursor: pointer;
 }`}
- src={props.sample.cover}
+ src={props.sample.cover_url}
  alt=""
- onClick={() => window.open(props.sample.link)}
+ onClick={() => window.open(props.sample.resource_url)}
 />)}
-{props.sample.webPreviewUrl && (
+{props.sample.resource_url && props.sample.video && (
    <div css={css`
    width: 100%; 
    height: 80%;`}>
 <ReactPlayer 
    width='100%'
    height='100%' 
-   url={props.sample.webPreviewUrl} 
+   url={props.sample.resource_url} 
    controls
 />
 </div>)}

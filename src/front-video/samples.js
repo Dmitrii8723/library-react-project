@@ -2,17 +2,20 @@ const frontVideo = [
     {
         "id": 1,
         "name": "Introduction to react JS",
-        "webPreviewUrl": "https://www.youtube.com/watch?v=dpw9EHDh2bM&feature=emb_title",
+        "resource_url": "https://www.youtube.com/watch?v=dpw9EHDh2bM&feature=emb_title",
+        "video": true
     },
     {
         "id": 2,
         "name": "Introduction to Vue JS",
-        "webPreviewUrl": "https://www.youtube.com/watch?v=DsuTwV0jwaY",
+        "resource_url": "https://www.youtube.com/watch?v=DsuTwV0jwaY",
+        "video": true
     },
     {
         "id": 3,
         "name": "Introduction to Angular JS",
-        "webPreviewUrl": "https://www.youtube.com/watch?v=nO1ROKMjPqI",
+        "resource_url": "https://www.youtube.com/watch?v=nO1ROKMjPqI",
+        "video": true
     }
         ];
 

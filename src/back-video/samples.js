@@ -2,17 +2,20 @@ const backVideo = [
     {
         "id": 1,
         "name": "Introduction to express JS",
-        "webPreviewUrl": "https://www.youtube.com/watch?v=L72fhGm1tfE",
+        "resource_url": "https://www.youtube.com/watch?v=L72fhGm1tfE",
+        "video": true
     },
     {
         "id": 2,
         "name": "Introduction to django",
-        "webPreviewUrl": "https://www.youtube.com/watch?v=K74_bKyNDd4",
+        "resource_url": "https://www.youtube.com/watch?v=K74_bKyNDd4",
+        "video": true
     },
     {
         "id": 3,
         "name": "Introduction to laravel",
-        "webPreviewUrl": "https://www.youtube.com/watch?v=EU7PRmCpx-0",
+        "resource_url": "https://www.youtube.com/watch?v=EU7PRmCpx-0",
+        "video": true
     }
         ];
 
