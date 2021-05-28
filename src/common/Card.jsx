@@ -16,7 +16,7 @@ align-items: center;
 justify-content: space-between;
 `}
 >  
-{props.sample.cover_url && (
+{props.resource.cover_url && (
 <img
  css={css`
  width: 100%; 
@@ -24,22 +24,22 @@ justify-content: space-between;
  &:hover {
    cursor: pointer;
 }`}
- src={props.sample.cover_url}
+ src={props.resource.cover_url}
  alt=""
- onClick={() => window.open(props.sample.resource_url)}
+ onClick={() => window.open(props.resource.resource_url)}
 />)}
-{props.sample.resource_url && props.sample.video && (
+{props.resource.resource_url && props.resource.video && (
    <div css={css`
    width: 100%; 
    height: 80%;`}>
 <ReactPlayer 
    width='100%'
    height='100%' 
-   url={props.sample.resource_url} 
+   url={props.resource.resource_url} 
    controls
 />
 </div>)}
-   <p css={css`font-size: 1.2em;`}>{props.sample.name}</p>
+   <p css={css`font-size: 1.2em;`}>{props.resource.name}</p>
 </div>
 );
 

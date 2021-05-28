@@ -3,9 +3,8 @@ import { css, jsx } from '@emotion/react';
 import { useState, useEffect } from 'react';
 import Sidebar from '../common/Sidebar';
 import Container from '../common/Container';
+import { getResources } from '../routes/index.js';
 
-const Dashboard = () => {
-const [allResources, setAllResources] = useState([]);
 const query = `
 {
 allResources {
@@ -16,15 +15,15 @@ allResources {
     type
   }
 }`;
+const Dashboard = () => {
+const [allResources, setAllResources] = useState([]);
 useEffect(() => {
-        fetch(`http://localhost:5000/graphql?query=${query}`, {
-        method: 'GET',
-        }).then((res) => res.json()
+        getResources(query).then((res) => res.json()
         .then((res) => setAllResources(res.data.allResources)))
 }, []);
 return(<div css={css`display: flex; width: 100%;`}>
 <Sidebar/>
-<Container samples={allResources} />
+<Container resources={allResources} />
 </div>);
 };
 

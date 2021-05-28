@@ -1,14 +1,30 @@
  /** @jsx jsx */
- import { css, jsx } from '@emotion/react';
+import { css, jsx } from '@emotion/react';
+import { useEffect, useState } from 'react';
 import Sidebar from '../common/Sidebar';
-import backEndSamples from './samples'
-import Container from '../common/Container'
+import Container from '../common/Container';
+import { getResources } from '../routes/index';
 
-const BackEndVideo = () => (
-<div css={css`display: flex; width: 100%;`}>
+const query = `
+{
+    resources(type: "backend", video: true) {
+      name
+      resource_url
+      cover_url
+      video
+      type
+    }
+  }`;
+const BackEndVideo = () => {
+const [backtendVideoResources, setBackendVideoResources] = useState([]);
+useEffect(() => {
+    getResources(query).then((res) => res.json()
+        .then((res) => setBackendVideoResources(res.data.resources)));
+})
+return (<div css={css`display: flex; width: 100%;`}>
 <Sidebar/>
-<Container samples={backEndSamples} />
-</div>
-);
+<Container resources={backtendVideoResources} />
+</div>);
+};
 
 export default BackEndVideo;
