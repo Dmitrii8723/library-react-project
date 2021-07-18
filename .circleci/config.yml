@@ -16,7 +16,7 @@ workflows:
   sample:
     jobs:
       - node/test:
-          version: '14.1'
+          version: '15.1'
           # after the node/test job completes, build the dist packages and save them to a workspace
           post-steps:
             - run: react-scripts build
