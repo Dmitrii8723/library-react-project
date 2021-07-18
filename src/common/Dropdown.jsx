@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react';
-import { useEffect } from 'react';
 import { VideoSourceItems } from './VideoSourceItems';
 import { WebsiteSourceItems } from './WebsiteSourceItems';
 
